@@ -1,6 +1,5 @@
 # DiscordRPC-Status
 Long forgotten thing i've made, in contrast to the skidds, this one can refresh the large image
-------------------
 ## Installing
 For this to work you will need to install these node modules:
 - discord `not discord.js (these are two different things!)`

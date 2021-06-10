@@ -3,7 +3,7 @@ const rpc = require("discord-rpc");
 const client = new rpc.Client({transport: 'ipc'})
 
 function updateRPC() {
-    var randomInt = Math.floor(Math.random() * maxInt);
+    var randomInt = Math.floor(Math.random() * maxInt); //cannot be more than: 300, must be >= amount of resources uploaded in aplication/rich presence
     try{
         client.request('SET_ACTIVITY', {
         pid: process.pid,
@@ -19,7 +19,6 @@ function updateRPC() {
     }
 }
 
-var randomInt = Math.floor(Math.random() * maxInt); //cannot be more than: 300, must be >= amount of resources uploaded in aplication/rich presence
 client.once('ready', () => {
     console.log('Status now active!');
     updateRPC();

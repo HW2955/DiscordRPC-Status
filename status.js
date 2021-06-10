@@ -22,16 +22,8 @@ function updateRPC() {
 var randomInt = Math.floor(Math.random() * maxInt); //cannot be more than: 300, must be >= amount of resources uploaded in aplication/rich presence
 client.once('ready', () => {
     console.log('Status now active!');
-    client.request('SET_ACTIVITY', {
-    pid: process.pid,
-    activity: {
-        details: `${detailsText}`,
-        assets: {
-            large_image: `himehowa${randomInt}`,
-            small_image: `heart`,
-        },
-        buttons: [{label: `${buttonText}`, url: `${buttonUrl}`}]
-}})})
+    updateRPC();
+})
 
 setInterval(() => {
     updateRPC();
